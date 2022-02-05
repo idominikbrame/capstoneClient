@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts",
+    "build": "NODE_PATH=./src react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -41,7 +41,6 @@
       "not dead",
       "not op_mini all"
     ],
-    "proxy": "https://localhost:4000",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
