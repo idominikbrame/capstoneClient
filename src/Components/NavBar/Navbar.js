@@ -63,7 +63,7 @@ export const Navbar = () => {
                 <div className={'navbar-right'}>
                     <Link exact to={'/login'}>Login</Link>
                     <Link exact to={'/register'}>Register</Link>
-                    <Link className={'navbar-userInfo'} to={'/user-info'}><img src={fifty} alt={'user'} width={25} height={25}/><span id={'onlineStatusCircle'}> <FaDotCircle /> </span> <span><VscTriangleDown /></span></Link>
+                    {/*<Link className={'navbar-userInfo'} to={'/user-info'}><img src={fifty} alt={'user'} width={25} height={25}/><span id={'onlineStatusCircle'}> <FaDotCircle /> </span> <span><VscTriangleDown /></span></Link>*/}
                 </div>
             </div>
 
