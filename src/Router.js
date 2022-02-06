@@ -31,11 +31,7 @@ const Router = () => {
                 <Route exact path="/login" element={<Login/>}/>
                 <Route exact path="/register" element={<Register/>}/>
                 <Route exact path="/top-headlines"
-                       element={
-                            <RequireAuth redirectTo="/login">
-                                <TopHeadlines />
-                            </RequireAuth>
-                       } />
+                       element={<TopHeadlines />} />
                 <Route exact path="/tech-news"
                        element={
                            <RequireAuth redirectTo="/login">
