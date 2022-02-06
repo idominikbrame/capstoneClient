@@ -4,7 +4,7 @@ import './Login.css'
 import {Link, Navigate} from "react-router-dom";
 
 const Login = () => {
-
+    console.log(typeof window.location.pathname)
     //Fetch Users from Express Back End
     const [loggedIn, setLoggedIn] = useState(false)
     const fetchUser = () => {
@@ -43,7 +43,7 @@ const Login = () => {
     if (!loggedIn) {
         return (
             <div className={'form-container'}>
-                <h1 id={'few-clicks'}>Your News Just A Few Clicks Away</h1>
+                <h1 id={'few-clicks'}>You're News Just A Few Clicks Away</h1>
                 <h2>Login</h2>
                 <form>
                     <label>Email: </label>

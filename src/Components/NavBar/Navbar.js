@@ -14,16 +14,19 @@ import axios from "axios";
 export const Navbar = () => {
     const [sidebar, setSidebar] = useState(true)
     const [searchTerm, setSearchTerm] = useState('')
+    const [windowWidth, setWindoWidth] = useState({width: undefined})
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
 
-    }, [data])
+
+    }, [data], )
 
     const showSidebar = () => {
-        return setSidebar(!sidebar)
+            return setSidebar(!sidebar)
+
     }
 
     const searchInput = () => {

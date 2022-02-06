@@ -1,8 +1,8 @@
 .form-container {
+    margin-top: 100px;
     width: 100vw;
     flex-direction: column;
     height: 60vh;
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;

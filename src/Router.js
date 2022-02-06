@@ -10,6 +10,7 @@ import Sports from "./Components/Sports/Sports";
 import Covid19 from "./Components/Covid-19/Covid19";
 import Register from "./Components/Register/Register";
 import TalkNews from "./Components/TalkNews/TalkNews"
+import Landing from "./Components/Landing/Landing";
 
 
 function RequireAuth({ children, redirectTo }) {
@@ -27,7 +28,7 @@ const Router = () => {
     return (
         <div>
             <Routes>
-                <Route exact path="/" element={<Login />}/>
+                <Route exact path="/" element={<Landing />}/>
                 <Route exact path="/login" element={<Login/>}/>
                 <Route exact path="/register" element={<Register/>}/>
                 <Route exact path="/top-headlines"
