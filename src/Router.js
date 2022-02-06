@@ -47,9 +47,9 @@ const Router = () => {
                        } />
                 <Route exact path="/sports"
                        element={
-                           <RequireAuth redirectTo="/login">
+                           // <RequireAuth redirectTo="/login">
                                <Sports />
-                           </RequireAuth>
+                           // </RequireAuth>
                        } />
                 <Route exact path="/covid19"
                        element={
