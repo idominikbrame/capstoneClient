@@ -84,6 +84,7 @@ li {
     .article-container {
         display: flex;
         flex-direction: column;
+        margin-left: 50px;
     }
 
 

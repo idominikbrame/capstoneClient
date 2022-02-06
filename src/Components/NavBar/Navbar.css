@@ -221,3 +221,10 @@ span {
     transition: 200ms;
 }
 
+@media (max-width: 900px) {
+    .nav-menu{
+        background-color: white;
+        z-index: 900;
+    }
+}
+
