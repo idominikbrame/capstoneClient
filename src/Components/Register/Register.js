@@ -9,7 +9,6 @@ const Register = () => {
     const [loggedIn, setLoggedIn] = useState(false)
 
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('')
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('')
@@ -47,7 +46,6 @@ const Register = () => {
         console.log(
             password,
             email,
-            confirmPassword,
             firstName,
             lastName
             )
@@ -60,17 +58,17 @@ const Register = () => {
             <div className={'form-container'}>
                 <h1>Register Page</h1>
                 <form>
-                    <label>First Name: </label>
-                    <input placeholder={"Alex"} onChange={(e) => setFirstName(e.target.value)}/>
-                    <label>Last Name: </label>
-                    <input placeholder={"Appleseed"} onChange={(e) => setLastName(e.target.value)}/>
-                    <label>Email: </label>
-                    <input placeholder={"example@email.com"} onChange={(e) => setEmail(e.target.value)}/>
-                    <label>Password: </label>
-                    <input placeholder={"password"} onChange={(e) => setPassword(e.target.value)}/>
-                    <label>Confirm Password: </label>
-                    <input placeholder={"password"} onChange={(e) => setConfirmPassword(e.target.value)} />
-                    <input type={"button"} onClick={registerUser} value={"Register"}/>
+                        <label>First Name: </label>
+                        <input placeholder={"Alex"} onChange={(e) => setFirstName(e.target.value)}/>
+                        <label>Last Name: </label>
+                        <input placeholder={"Appleseed"} onChange={(e) => setLastName(e.target.value)}/>
+                        <label>Email: </label>
+                        <input placeholder={"example@email.com"} onChange={(e) => setEmail(e.target.value)}/>
+
+                        <label>Password: </label>
+                        <input placeholder={"password"} onChange={(e) => setPassword(e.target.value)}/>
+                        <input type={"button"} onClick={registerUser} value={"Register"}/>
+
                 </form>
             </div>
         );

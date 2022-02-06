@@ -60,12 +60,12 @@ const Router = () => {
                                <Covid19 />
                            </RequireAuth>
                        } />
-                {/*<Route exact path="/talknews"*/}
-                {/*       element={*/}
-                {/*           <RequireAuth redirectTo="/login">*/}
-                {/*               <TalkNews />*/}
-                {/*           </RequireAuth>*/}
-                {/*       } />*/}
+                <Route exact path="/api/:search"
+                       element={
+                           <RequireAuth redirectTo="/login">
+                               <TalkNews />
+                           </RequireAuth>
+                       } />
             </Routes>
         </div>
     );

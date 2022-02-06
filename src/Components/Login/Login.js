@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import './Login.css'
-import {Navigate} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
 
 const Login = () => {
 
@@ -50,6 +50,8 @@ const Login = () => {
                     <label>Password: </label>
                     <input placeholder={"password"} onChange={(e) => setPassword(e.target.value)}/>
                     <input type={"button"} onClick={fetchUser} value={"Login"}/>
+                    <Link exact to={'/register'}> <input type={"button"} value={"Register"}/></Link>
+
                 </form>
             </div>
         );

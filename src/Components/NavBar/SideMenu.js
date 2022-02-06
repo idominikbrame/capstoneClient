@@ -29,12 +29,6 @@ export const SidebarData = [
         class: 'nav-text'
     },
     {
-        title: 'International',
-        path: '/international',
-        icon: <BiWorld />,
-        class: 'nav-text'
-    },
-    {
         title: 'Sports',
         path: '/sports',
         icon: <MdSportsSoccer />,

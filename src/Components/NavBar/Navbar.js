@@ -9,10 +9,18 @@ import {FaDotCircle} from "react-icons/fa"
 import './Navbar.css'
 import {VscTriangleDown} from 'react-icons/vsc'
 import {ImSearch} from 'react-icons/im'
+import axios from "axios";
 
 export const Navbar = () => {
     const [sidebar, setSidebar] = useState(true)
     const [searchTerm, setSearchTerm] = useState('')
+
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+
+    }, [data])
 
     const showSidebar = () => {
         return setSidebar(!sidebar)
@@ -20,7 +28,15 @@ export const Navbar = () => {
 
     const searchInput = () => {
         if(searchTerm !== '') {
-            console.log('we outchea')
+            if(data === null) {
+                const fetch = async () =>
+                    await axios('https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=98d7f472269a4474ab5638c51bda73f1')
+                        .then(response => setData(response.data.articles))
+                        .then(() => setLoading(false))
+                fetch()
+            } else {
+                return
+            }
         }
     }
 
@@ -39,11 +55,11 @@ export const Navbar = () => {
                     <h3 id={'pipe'}>|</h3>
                     <h3 >Your Quick News Digest Source</h3>
                 </Link>
-                <form>
-                    <button type={"button"} onClick={searchInput}><ImSearch /></button>
-                    <input onChange={(e) => setSearchTerm(e.target.value)} placeholder={'Search By Keyword'}/>
+                {/*<form>*/}
+                {/*    <button type={"button"} onClick={searchInput}><ImSearch /></button>*/}
+                {/*    <input onChange={(e) => setSearchTerm(e.target.value)} placeholder={'Search By Keyword'}/>*/}
 
-                </form>
+                {/*</form>*/}
                 <div className={'navbar-right'}>
                     <Link exact to={'/login'}>Login</Link>
                     <Link exact to={'/register'}>Register</Link>
@@ -55,7 +71,7 @@ export const Navbar = () => {
 
             {/* Side menu */}
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                <ul className={'nav-menu-items'} onClick={showSidebar}>
+                <ul className={'nav-menu-items'} /* onClick={showSidebar} */>
                     <li>
                     <Link to={'#'} className={'menu-bars-close'}>
                     </Link>
