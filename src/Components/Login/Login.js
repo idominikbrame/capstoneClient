@@ -43,7 +43,8 @@ const Login = () => {
     if (!loggedIn) {
         return (
             <div className={'form-container'}>
-                <h1>Login Page</h1>
+                <h1 id={'few-clicks'}>Your News Just A Few Clicks Away</h1>
+                <h2>Login</h2>
                 <form>
                     <label>Email: </label>
                     <input placeholder={"example@email.com"} onChange={(e) => setEmail(e.target.value)}/>
