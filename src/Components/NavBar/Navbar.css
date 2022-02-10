@@ -127,7 +127,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 0 8px 16px;
     list-style: none;
     height: 90px;
 }
@@ -219,5 +219,12 @@ span {
     border-radius: 50%;
     cursor: pointer;
     transition: 200ms;
+}
+
+@media (max-width: 900px) {
+    .nav-menu{
+        background-color: white;
+        z-index: 900;
+    }
 }
 
