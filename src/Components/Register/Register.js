@@ -14,6 +14,7 @@ const Register = () => {
     const [lastName, setLastName] = useState('')
 
     const registerUser = () => {
+        authSuccessful()
         axios({
             method: 'post',
             url: 'https://render-news.herokuapp.com/register',
@@ -24,10 +25,6 @@ const Register = () => {
                 last_name: lastName,
             })
         })
-            .then(response => {
-               console.log(response)
-
-            })
     };
 
     const authSuccessful = () => {
@@ -49,7 +46,7 @@ const Register = () => {
             firstName,
             lastName
             )
-    })
+    }, [])
 
 
     //Return Login UI
@@ -73,7 +70,7 @@ const Register = () => {
             </div>
         );
     } else {
-        return <Navigate replace to={'/top-headlines'} />
+        return <Navigate to={'/top-headlines'} />
     }
 
 };
