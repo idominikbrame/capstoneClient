@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import './TopHeadlines.css'
 import {BsChevronDown} from 'react-icons/bs'
+import articleImage from '../../images/podcast-logo.png'
 import moment from "moment";
 
 
@@ -44,8 +45,7 @@ const TopHeadlines = () => {
                                <li className={'article-source-name'}>3 hours hours ago</li>
                            </div>
 
-                           <img  src={'../../images/podcast-logo.png'} alt={'article'}/>
-                           <BsChevronDown className={'show-more-chevron'}/>
+                           <img  src={articleImage} alt={'article'}/>                           <BsChevronDown className={'show-more-chevron'}/>
 
                        </div>
 
@@ -57,7 +57,7 @@ const TopHeadlines = () => {
                         <li className={'article-source-name'}>3 hours hours ago</li>
                     </div>
 
-                    <img  src={'../../images/podcast-logo.png'} alt={'article'}/>
+                    <img  src={articleImage} alt={'article'}/>
                     <BsChevronDown className={'show-more-chevron'}/>
 
                 </div>
@@ -70,7 +70,7 @@ const TopHeadlines = () => {
                         <li className={'article-source-name'}>3 hours hours ago</li>
                     </div>
 
-                    <img  src={'../../images/podcast-logo.png'} alt={'article'}/>
+                    <img  src={articleImage} alt={'article'}/>
                     <BsChevronDown className={'show-more-chevron'}/>
 
                 </div>
@@ -83,8 +83,7 @@ const TopHeadlines = () => {
                         <li className={'article-source-name'}>3 hours hours ago</li>
                     </div>
 
-                    <img  src={'../../images/podcast-logo.png'} alt={'article'}/>
-                    <BsChevronDown className={'show-more-chevron'}/>
+                    <img  src={articleImage} alt={'article'}/>                    <BsChevronDown className={'show-more-chevron'}/>
 
                 </div>
 
@@ -96,8 +95,7 @@ const TopHeadlines = () => {
                         <li className={'article-source-name'}>3 hours hours ago</li>
                     </div>
 
-                    <img  src={'../../images/podcast-logo.png'} alt={'article'}/>
-                    <BsChevronDown className={'show-more-chevron'}/>
+                    <img  src={articleImage} alt={'article'}/>                    <BsChevronDown className={'show-more-chevron'}/>
 
                 </div>
 
